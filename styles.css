@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-size: 15px;
+    font-family: Robot, sans-serif;
+    line-height: 1.6;
+    background: #dcdcdc;
+}
+
+.container {
+    height: 550px;
+    width: 550px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: black;
+    background: aliceblue;
+    text-align: center;
+}
+
+.container-logo {
+    color: black;
+    font-family: Robot, sans-serif;
+    font-size: 25px;
+}
+
+.container-bar_input {
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.container-bar_save_button {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    color: white;
+    box-shadow: black;
+    background: cornflowerblue;
+    font-weight: bold;
+}
+
+.container_tab {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 25px;
+    padding: 10px;
+    justify-self: center;
+
+}
+
