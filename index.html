@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+
     <title>To do</title>
 </head>
 <body>
@@ -11,19 +12,19 @@
     <h1 class="container_logo">To Do App</h1>
 
     <div class="container-bar">
-        <input type="text" class="container-bar_input">
-        <button class="container-bar__saveButton">SAVE</button>
+        <input type="text" class="container-bar_input" id ="task">
+        <button class="container-bar__saveButton" id = "saveButton">SAVE</button>
     </div>
 
-    <div class="container-tab">
+    <div class="container-tab" id = "tabTask">
         <div class="container-tab__task">
             <div class="container-tab__task__number">1</div>
             <div class="container-tab__task__txt">Buy groceries for next week</div>
-            <button class="container-tab__task__button">FINISHED</button>
+            <button class="container-tab__task__button" id = "finished">FINISHED</button>
         </div>
     </div>
 </div>
 
-
+<script src="script.js"></script>
 </body>
 </html>

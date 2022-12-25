@@ -43,14 +43,18 @@ body {
     display: grid;
     grid-template-rows: repeat(3,auto);
     gap: 25px;
-    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
     justify-self: center;
+
 
 }
 
 .container-tab__task{
     display: grid;
     grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
 
 }
 
