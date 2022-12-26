@@ -66,7 +66,32 @@ body {
     margin: auto;
 }
 
-.container-tab__task__button{
+.container-tab__task__buttons{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+}
+
+.container-tab__task__txt{
+    text-decoration-style: solid;
+    text-decoration-color: black;
+}
+
+.container-tab__task__button__delete{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    color: white;
+    box-shadow: black;
+    background: red;
+    font-weight: bold;
+    margin: auto;
+}
+
+
+
+.container-tab__task__button__finished{
     width: 80px;
     height: 40px;
     border-radius: 10px;

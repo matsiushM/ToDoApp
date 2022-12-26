@@ -12,15 +12,19 @@
     <h1 class="container_logo">To Do App</h1>
 
     <div class="container-bar">
-        <input type="text" class="container-bar_input" id ="task">
-        <button class="container-bar__saveButton" id = "saveButton">SAVE</button>
+        <input type="text" class="container-bar_input" id="task">
+        <button type="button" class="container-bar__saveButton" id="saveButton">SAVE</button>
     </div>
 
-    <div class="container-tab" id = "tabTask">
-        <div class="container-tab__task">
+    <div class="container-tab" id="tabTask">
+        <div class="container-tab__task" id="taskLine">
             <div class="container-tab__task__number">1</div>
             <div class="container-tab__task__txt">Buy groceries for next week</div>
-            <button class="container-tab__task__button" id = "finished">FINISHED</button>
+
+            <div class="container-tab__task__buttons">
+                <button type="button" id="delete" class="container-tab__task__button__delete">DELETE</button>
+                <button type="button" id="finished" class="container-tab__task__button__finished">FINISHED</button>
+            </div>
         </div>
     </div>
 </div>
