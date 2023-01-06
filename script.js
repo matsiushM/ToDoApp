@@ -1,13 +1,20 @@
 
 const buttonSave = document.getElementById("saveButton");
-const finishedButton = document.getElementById("finished");
 const deleteButton = document.querySelector("#delete");
 const tabTask = document.querySelector("#tabTask");
+const tabTaskFinished = document.querySelector("#tabTaskFinished");
+const container = document.querySelectorAll(".container");
 let point = 1;
 
 buttonSave.addEventListener("click", saveTask);
-finishedButton.addEventListener("click", finishedTask);
-tabTask.addEventListener("click", deleteTask);
+
+container.forEach(item => {
+    item.addEventListener("click", finishedTask);
+    item.addEventListener("click", deleteTask);
+})
+
+
+
 
 function saveTask() {
     const task = document.getElementById("task").value;
@@ -27,17 +34,16 @@ function saveTask() {
 
 
 function deleteTask(event) {
-    console.log(event.target);
     if(event.target.id === "delete"){
-
         const node =  event.target.closest(".container-tab__task");
-        console.log(node);
         node.remove();
         --point;
     }
 }
 function finishedTask(event) {
     if(event.target.id === "finished"){
-        console.log("Done");
+        const nodeFinished = event.target.closest(".container-tab__task");
+        console.log(nodeFinished);
+        tabTaskFinished.insertAdjacentElement("afterbegin",nodeFinished);
     }
 }

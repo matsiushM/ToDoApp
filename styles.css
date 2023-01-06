@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    height: 550px;
+    height: auto;
     width: 550px;
     margin: auto;
     border-radius: 10px;
@@ -41,43 +41,41 @@ body {
 
 .container-tab {
     display: grid;
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat(3, auto);
     gap: 25px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
     justify-self: center;
-
-
 }
 
-.container-tab__task{
+.container-tab__task {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: space-between;
 
 }
 
-.container-tab__task__txt{
+.container-tab__task__txt {
     margin: auto;
 }
 
-.container-tab__task__number{
+.container-tab__task__number {
     margin: auto;
 }
 
-.container-tab__task__buttons{
+.container-tab__task__buttons {
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2, auto);
     gap: 10px;
 }
 
-.container-tab__task__txt{
+.container-tab__task__txt {
     text-decoration-style: solid;
     text-decoration-color: black;
 }
 
-.container-tab__task__button__delete{
+.container-tab__task__button__delete {
     width: 80px;
     height: 40px;
     border-radius: 10px;
@@ -90,8 +88,7 @@ body {
 }
 
 
-
-.container-tab__task__button__finished{
+.container-tab__task__button__finished {
     width: 80px;
     height: 40px;
     border-radius: 10px;
@@ -103,3 +100,18 @@ body {
     margin: auto;
 }
 
+.container-tabFinished {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    justify-self: center;
+}
+
+.container-tabFinished__task{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+}
