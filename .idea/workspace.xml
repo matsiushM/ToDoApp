@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4b538be-b35b-4c08-ac6e-2a5eb28cfe9d" name="Changes" comment="day">
+    <list default="true" id="e4b538be-b35b-4c08-ac6e-2a5eb28cfe9d" name="Changes" comment="fixed js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +17,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,6 +39,10 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="2JHdZmATnxe2Wkrn4bEGeQDsENN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,6 +66,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="script.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="script.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +80,13 @@
       <option name="presentableId" value="Default" />
       <updated>1671739001091</updated>
       <workItem from="1671739002601" duration="16789000" />
-      <workItem from="1671881451736" duration="788000" />
+      <workItem from="1671881451736" duration="4249000" />
+      <workItem from="1671973637006" duration="8423000" />
+      <workItem from="1672066733497" duration="5679000" />
+      <workItem from="1672082229647" duration="1243000" />
+      <workItem from="1672334039639" duration="3804000" />
+      <workItem from="1672822631259" duration="17405000" />
+      <workItem from="1673177171156" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="day1">
       <created>1671753309970</created>
@@ -88,7 +102,35 @@
       <option name="project" value="LOCAL" />
       <updated>1671754296930</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed task">
+      <created>1671882304137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671882304137</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add js">
+      <created>1672009540461</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672009540461</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed js">
+      <created>1672073826271</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672073826271</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed js">
+      <created>1673040001546</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673040001546</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +150,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day1" />
     <MESSAGE value="day" />
-    <option name="LAST_COMMIT_MESSAGE" value="day" />
+    <MESSAGE value="fixed task" />
+    <MESSAGE value="add js" />
+    <MESSAGE value="fixed js" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed js" />
   </component>
 </project>
