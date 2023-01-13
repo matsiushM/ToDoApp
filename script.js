@@ -1,49 +1,83 @@
-
-const buttonSave = document.getElementById("saveButton");
-const deleteButton = document.querySelector("#delete");
+const buttonSave = document.querySelector("#saveButton");
 const tabTask = document.querySelector("#tabTask");
 const tabTaskFinished = document.querySelector("#tabTaskFinished");
-const container = document.querySelectorAll(".container");
+const textInput = document.querySelector("#task");
+let todos = [];
 let point = 1;
 
-buttonSave.addEventListener("click", saveTask);
+const saveTask = (name) => {
 
-container.forEach(item => {
-    item.addEventListener("click", finishedTask);
-    item.addEventListener("click", deleteTask);
-})
+    const task = {
+        id: point,
+        taskText: 'txt',
+        isFinished: false,
+    };
 
 
+    const divTaskLine = document.createElement('div');
+    const span = document.createElement('span');
+    const idTask = document.createElement('span');
+    const div = document.createElement('div');
+    const buttonFinished = document.createElement("button");
+    const buttonDelete = document.createElement("button");
 
+    divTaskLine.classList.add('container-tab__line');
+    buttonFinished.classList.add('container-tab__task__button__finished');
+    buttonDelete.classList.add('container-tab__task__button__delete');
 
-function saveTask() {
-    const task = document.getElementById("task").value;
+    buttonFinished.textContent = "FINISHED";
+    buttonDelete.textContent = "DELETE";
+    idTask.textContent = point;
+    span.textContent = textInput.value.trim();
+    div.appendChild(buttonFinished);
+    div.appendChild(buttonDelete);
+    divTaskLine.appendChild(idTask);
+    divTaskLine.appendChild(span);
+    divTaskLine.appendChild(div);
 
-    const taskHTMl = `<div class="container-tab__task">
-            <div class="container-tab__task__number">${++point}</div>
-            <div class="container-tab__task__txt">${task}</div>
+    console.log(checkRepeat(span.textContent));
+    if (span.textContent === '') {
+        alert("Зачем добавлять пустую задачу?")
+    } else if (!checkRepeat(span.textContent)) {
+        task.taskText = span.textContent;
+        task.id = point++;
+        todos.push(task);
+        tabTask.insertAdjacentElement("beforeend", divTaskLine);
+    } else {
+        alert("повторяющаяся задача");
+    }
+    textInput.value = "";
+    buttonDelete.addEventListener("click", () => deleteTask(buttonDelete.parentNode, task.id));
+    buttonFinished.addEventListener("click", () => finishedTask(buttonFinished.parentNode, task));
 
-            <div class="container-tab__task__buttons">
-                <button type="button" class="container-tab__task__button__delete" id="delete">DELETE</button>
-                <button type="button" class="container-tab__task__button__finished" id="finished">FINISHED</button>
-            </div>
-        </div>`;
-    tabTask.insertAdjacentHTML("beforeend", taskHTMl);
-
+    console.log(todos);
 }
 
+const checkRepeat = (text) => {
+    return todos.find(item => item.taskText === text);
+}
 
-function deleteTask(event) {
-    if(event.target.id === "delete"){
-        const node =  event.target.closest(".container-tab__task");
-        node.remove();
-        --point;
+const deleteTask = (event, id) => {
+    event.parentNode.parentNode.removeChild(event.parentNode);
+    todos = todos.filter(item => item.id !== id);
+}
+
+const finishedTask = (event, task) => {
+    if(task.isFinished === false){
+        tabTaskFinished.insertAdjacentElement("beforeend", event.parentNode);
+        todos.forEach(item => {
+            if(item.id === task.id){
+                item.isFinished = true;
+            }
+        })
+    }else {
+        tabTask.insertAdjacentElement("beforeend", event.parentNode);
+        todos.forEach(item => {
+            if(item.id === task.id){
+                item.isFinished = false;
+            }
+        })
     }
 }
-function finishedTask(event) {
-    if(event.target.id === "finished"){
-        const nodeFinished = event.target.closest(".container-tab__task");
-        console.log(nodeFinished);
-        tabTaskFinished.insertAdjacentElement("afterbegin",nodeFinished);
-    }
-}
+
+buttonSave.addEventListener("click", () => saveTask(tabTask));

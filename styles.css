@@ -34,84 +34,54 @@ body {
     border-radius: 10px;
     border: 0;
     color: white;
-    box-shadow: black;
+    box-shadow: 3px 3px 3px black;
     background: cornflowerblue;
     font-weight: bold;
 }
-
-.container-tab {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    gap: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    justify-self: center;
-}
-
-.container-tab__task {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-
-}
-
-.container-tab__task__txt {
+.container-tab{
     margin: auto;
+    padding: 10px;
 }
-
-.container-tab__task__number {
+.container-tabFinished{
     margin: auto;
+    padding: 10px;
 }
 
-.container-tab__task__buttons {
+.container-tab__line {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
+    grid-template-columns: 1fr 1fr auto;
+    border-radius: 15px;
+    background: azure;
+    box-shadow: 3px 3px 3px gray;
+    margin: 10px;
 }
 
-.container-tab__task__txt {
-    text-decoration-style: solid;
-    text-decoration-color: black;
-}
+
+
 
 .container-tab__task__button__delete {
     width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
+    height: 35px;
+    border-radius: 15px;
+    border:0;
     color: white;
-    box-shadow: black;
+    box-shadow:2px 2px 2px black;
     background: red;
     font-weight: bold;
-    margin: auto;
+    margin-left: 5px;
 }
 
 
 .container-tab__task__button__finished {
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
+    width: 83px;
+    height: 35px;
+    border-radius: 15px;
     border: 0;
     color: white;
-    box-shadow: black;
+    box-shadow: 2px 2px 2px black;
     background: darkgreen;
     font-weight: bold;
-    margin: auto;
+    margin-left: 5px;
 }
 
-.container-tabFinished {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    gap: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    justify-self: center;
-}
 
-.container-tabFinished__task{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-}
